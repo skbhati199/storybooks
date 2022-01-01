@@ -1,0 +1,30 @@
+version: '3'
+services:
+  api-server:
+    build: ./
+    env_file: ./config/config.env
+    ports:
+      - "3000:3000"
+    networks:
+      - learnigspacepro
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo:3.6-xenial
+    ports:
+      - "27017:27017"
+    networks:
+      - learnigspacepro
+    volumes:
+      - mongo-data:/data/db
+    restart: always
+    environment:
+      - MONGO_INITDB_DATABASE=learnigspacepro
+  
+networks:
+  learnigspacepro:
+    driver: bridge
+  
+volumes:
+  mongo-data:
+    driver: local

@@ -1,0 +1,7 @@
+app_name="learningspacepro"
+gcp_project_id="devops-app-336906"
+atlas_project_id = "61d049560245ab168070d4c5"
+mongodbatlas_public_key="aeztpnyb"
+mongodbatlas_private_key="5a16c436-e1c0-4240-bb7c-333caaf8d41d"
+domain="learningspacepro.com"
+cloudflare_email="info@infoskillstechnology.org"
